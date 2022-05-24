@@ -1,11 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
 }
 
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
+
+  background-color: #EEEEEE;
 }
 
+header{
+  background-color: #7FB5FF;
+
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1{
+  color: #001D6E;
+  letter-spacing: 7px;
+  font-size: 2.3rem;
+}
+
+.gallery-container {
+  width: 80%;
+  margin: 50px auto 100px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.gallery-container img {
+  transition: .3s ease;
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+}
+
+.gallery-container img:hover {
+  transition: .4s ease;
+  transform: scale(1.1);
+}
+
+.full-img{
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(0,0,0,0.9);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-img img{
+  width: 90%;
+  max-width: 700px;
+}
+
+.full-img span{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.disable-scroll{
+  overflow-y: hidden;
+}
